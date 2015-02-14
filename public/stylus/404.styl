@@ -1,0 +1,131 @@
+/*DOCUMENTO CSS*/
+
+/*--------------------------------------------*/
+/*colores de la pagina*/
+azul_claro = #01b5ff
+azul_mediano = #0e56f9
+azul_oscuro = #000393
+rojo_carmesi = #ff4842
+rojo_carmesi_oscuro = #d0272a
+verde_lima = #7dcd40
+verde_lima_oscuro = #6dae33
+sombra_clara = #333
+sombra_oscura = #222
+/*fin de los colores de la pagina*/
+/*--------------------------------------------*/
+/*importando fuentes*/
+
+@font-face 
+  font-family "montserrat-regular"
+  font-style normal
+  font-weight normal
+  src url("../fonts/montserrat-regular.woff") format("woff"), url("../fonts/montserrat-regular.ttf") format("truetype"), url("../fonts/montserrat-regular.eot") format("eot"), url("../fonts/montserrat-regular.svg") format("svg")
+
+@font-face 
+  font-family "montserrat-bold"
+  font-style normal
+  font-weight normal
+  src url("../fonts/montserrat-bold.woff") format("woff"), url("../fonts/montserrat-bold.ttf") format("truetype"), url("../fonts/montserrat-bold.eot") format("eot"), url("../fonts/montserrat-bold.svg") format("svg")
+
+/*fin de los importes de fuentes*/
+/*--------------------------------------------*/
+
+body 
+	background #008fd5
+	height 100%
+	overflow hidden
+	width 100%
+	
+header 
+	background azul_claro
+	height 100px
+	overflow hidden 
+	width 100%
+	z-index 999
+	h1 
+		color #fff
+		font-family montserrat-bold
+		font-size 45px
+		text-align center
+		
+html 	
+	height 100%
+	overflow hidden
+	width 100%
+
+.wapper
+	background #008fd5
+	box-shadow 0px 1px 10px 1px sombra_clara
+	height 100%
+	z-index -1
+	
+	a 
+		background-color rojo_carmesi
+		border-bottom solid 5px rojo_carmesi_oscuro
+		border-radius 5px
+		color #fff
+		display block
+		font-family montserrat-regular
+		font-size 25px
+		margin 30px auto
+		padding 10px 0px
+		text-align center
+		text-decoration none
+		width 200px
+		&:hover 
+			background-color verde_lima 
+			border-bottom solid 5px verde_lima_oscuro
+			color #fff
+			text-decoration none
+
+	
+	h2
+		color #fff
+		font-family montserrat-bold
+		font-size 45px
+		text-align center
+	
+	img 
+		display block 
+		margin auto
+		padding-bottom 20px
+		padding-top 130px
+
+@media (max-width: 767px)
+
+	header 
+		height 100px
+		overflow hidden 
+		width 100%
+		z-index 999
+		
+		h1 
+			color #fff
+			font-family montserrat-bold
+			font-size 30px
+			text-align center
+		
+	.wapper
+		background #008fd5
+		box-shadow 0px 1px 10px 1px sombra_clara
+		height 100%
+		z-index -1
+		
+		a 
+			font-size 22px
+			margin-top 20px
+			width 180px
+
+		
+		h2
+			color #fff
+			font-family montserrat-bold
+			font-size 30px
+			text-align center
+		
+		img 
+			display block 
+			margin auto
+			padding-bottom 10px
+			padding-top 10px
+			width 60%

@@ -1,0 +1,238 @@
+/*DOCUMENTO CSS*/
+
+
+/*--------------------------------------------*/
+/*colores de la pagina*/
+azul_claro = #01b5ff
+azul_mediano = #0e56f9
+azul_oscuro = #000393
+rojo_carmesi = #ff4842
+rojo_carmesi_oscuro = #d0272a
+verde_lima = #7dcd40
+verde_lima_oscuro = #6dae33
+sombra_clara = #333
+sombra_oscura = #222
+/*fin de los colores de la pagina*/
+/*--------------------------------------------*/
+
+@import 'nib/vendor'
+vendor-prefixes = o ms moz webkit khtml official 
+
+/*--------------------------------------------*/
+
+
+/*----------------ESTILOS PARA LAS ETIQUETAS----------------------------*/
+
+
+
+/*----------------FIN ESTILOS PARA LAS ETIQUETAS----------------------------*/
+
+
+/*----------------ESTILOS PARA LOS ID'S----------------------------*/
+#wapper-form
+	position fixed
+	top 52px
+/*----------------FIN ESTILOS PARA LOS ID'S----------------------------*/
+
+
+/*----------------ESTILOS PARA LAS CLASES----------------------------*/
+
+.glyphicon
+	font-family 'Glyphicons Halflings'
+	
+.menu
+	background-color #222
+	box-shadow 1px 1px  4px 1px #222
+	border-bottom solid 2px #000
+	border-top solid 2px #000
+	font-weight bold
+	height 100%
+	letter-spacing 1px
+	margin-right 180px
+	padding 0px
+	padding-top 5px
+	position fixed
+	top 52px
+	width 180px 
+	
+	h3
+		background-color rojo_carmesi
+		box-shadow 0px 0px 10px #111
+		color #fff
+		font-family montserrat-regular
+		display table
+		font-size 18px
+		padding 10px 5px
+		margin 20px auto
+		width 100%
+		text-align center
+
+	li
+		margin 0
+		a 
+			border-radius 0px
+			color white
+			font-family montserrat-regular
+			font-size 16px
+			
+			&:hover
+				background-color #fff
+				color #000
+
+.subWapper
+	background-color #fff
+	border solid 2px verde_lima
+	border-radius 5px
+	box-shadow 0px 0px 5px #222
+	margin auto
+	min-height 500px
+	padding 20px
+	width 90%
+	
+	h2
+		border none
+		margin auto
+		margin-bottom 20px
+	
+	p
+		display block
+		font-family montserrat-regular
+		font-size 18px
+		margin-top 10px
+	
+	table
+		font-size 18px
+		margin 30px 0px
+		text-align center
+	
+	.btn
+		display inline-block
+		font-family montserrat-regular
+		font-size 20px
+		margin 10px
+	
+	.boxvideo
+		display inline-block
+		margin 15px
+		width 26%
+		h4
+			background-color rojo_carmesi
+			box-shadow 1px 1px 5px #333
+			color #fff
+			font-family montserrat-regular
+			font-size 20px
+			padding 10px
+			text-align center
+			width 100%
+		
+	.videohelp
+		background url(../img/diamantes.png)
+		box-shadow 1px 1px 5px #333
+		height 200px
+		font-family 'Glyphicons Halflings'
+		position relative
+		a
+			background-color verde_lima
+			border solid 5px verde_lima_oscuro
+			border-radius 50%
+			color white
+			display table
+			font-size 40px
+			left 50%
+			margin-left -35px
+			margin-top -45px
+			padding 10px 10px 10px 15px
+			position absolute 
+			top 50%
+
+.userbox
+	text-align center
+	
+	h2
+		background-color #eee
+		border solid 4px rojo_carmesi
+		border-radius 5px
+		margin auto
+		text-align center
+	span
+		background-color verde_lima
+		border solid 4px verde_lima_oscuro
+		border-radius 50%
+		font-size 50px	
+		margin 10px 0px 20px 0px
+		padding 20px
+		transition all 0.5s
+		&:hover
+			background-color rojo_carmesi
+			border solid 4px rojo_carmesi_oscuro
+			color white
+			
+
+.wapper
+	display block
+	margin auto
+	margin-left 180px
+	margin-top 80px
+	min-height 700px
+
+/*----------------FIN ESTILOS PARA LAS CLASES----------------------------*/
+
+/*----------------RESPONSIVE DESING----------------------------*/
+
+@media (max-width: 1200px) and (min-width: 768px)
+
+	.subWapper
+		.boxvideo
+			display inline-block
+			margin 15px
+			width 40%
+
+
+@media (max-width: 767px)
+
+
+	#wapper-form
+		top 48px
+
+	.menu
+		margin-right 70px
+		overflow hidden
+		padding-top 0px
+		position fixed
+		top 48px
+		width 40px 
+
+		h3
+			display none
+			
+		li 
+			height 35px 
+			overflow hidden
+			margin-top 10px
+			width 100%
+			a
+				font-size 18px
+				padding 10px 0px 10px 0px
+		b
+			padding 0px
+			text-align center
+			width 100%
+
+	.subWapper
+		border none
+		min-height auto
+	
+		.boxvideo
+			display block
+			margin 15px
+			width 95%
+
+	.wapper
+		display block
+		margin auto
+		margin-left 35px
+		margin-right 0px
+		margin-top 80px	
+
+	
+		

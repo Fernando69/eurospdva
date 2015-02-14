@@ -1,0 +1,249 @@
+/*DOCUMENTO CSS*/
+
+/*--------------------------------------------*/
+/*colores de la pagina*/
+azul_claro = #01b5ff
+azul_mediano = #0e56f9
+azul_oscuro = #000393
+rojo_carmesi = #ff4842
+rojo_carmesi_oscuro = #d0272a
+verde_lima = #7dcd40
+verde_lima_oscuro = #6dae33
+sombra_clara = #333
+sombra_oscura = #222
+/*fin de los colores de la pagina*/
+/*--------------------------------------------*/
+
+@import 'nib/vendor'
+vendor-prefixes = o ms moz webkit khtml official 
+
+/*--------------------------------------------*/
+/*----------------ESTILOS PARA LOS ID'S----------------------------*/
+
+#wapper-form
+	background-color #fff
+	box-shadow 0px 1px 1px #222
+	margin-top 0px
+	padding 8px 5px
+	position absolute
+	width 100%
+	z-index 999
+	
+	.form-toggle
+		border-bottom solid 1px rgba(0,0,0,0.3)
+		display block
+		height 45px
+		margin auto
+		margin-top 0px
+		padding 0px
+		padding-bottom 5px
+		position relative
+		transition opacity 1s
+		width 80%
+		z-index 999
+
+		input
+			border none
+			color #555
+			display inline-block
+			float left
+			font-size 19px
+			font-weight bold
+			margin-right 10px
+			outline 0
+			padding 8px 
+			width 80%
+		
+		button, a 
+			font-size 25px
+			float right
+			margin-top 5px
+			padding 5px 10px 5px 8px
+			
+		button 
+			background-color transparent
+			border none
+			color azul_claro
+			
+		a
+			color rgba(0,0,0,0.4)
+			cursor pointer
+			text-decoration none
+			
+/*----------------FIN DE LOS ESTILOS PARA LOS ID'S----------------------------*/
+
+
+/*----------------ESTILOS PARA LAS CALSES----------------------------*/
+
+.down 
+	display block
+	opacity 1
+	z-index 999	
+	
+.dropdown-menu 
+	background-color #eee
+	border-radius 4px 
+	box-shadow 0px 0px 6px #333
+	font-size 17px
+
+.dropdown-menu li a
+	padding 8px
+
+	&:hover
+		background azul_claro
+		color white
+
+.glyphicon
+	font-family 'Glyphicons Halflings'
+
+
+.glyphicon-home
+	font-size 20px
+	margin-top -2px
+	
+.glyphicon-search
+	cursor pointer
+	margin-top -3px
+	padding 3px
+
+.glyphicon-user 
+	font-size 15px
+	margin-right 10px
+
+
+.input-group-btn, .form-control
+	display inline
+
+.navbar
+	background azul_claro
+	box-shadow 0px 1px 1px #222
+	margin-bottom 0px
+	position fixed
+	top 0px
+	width 100%
+	z-index 9999
+
+.navbar-default
+	border none
+	border-radius 0px
+	position fixed
+
+.navbar-default .navbar-nav > li > a
+	&:hover
+		color white
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form
+	border-color transparent
+	
+.navbar-nav > li > ul 
+	font-family "montserrat-regular"
+	
+.navbar-default .navbar-nav > li > a, #btn-toggle, #btn-toggle2
+	border none
+	color white
+	font-family "montserrat-regular"
+	font-size 18px
+	height 52px
+	letter-spacing 0.1px
+	padding 15px 12px
+	text-decoration none
+	text-shadow 1px 1px 1px rgba(0,0,0,0.6)
+	&:hover
+		border-bottom solid 7px azul_mediano
+		transition border 0.4s
+
+.up 
+	display none
+	opacity 0
+
+
+
+/*----------------FIN DE LOS ESTILOS PARA LAS CLASES----------------------------*/
+
+
+/*----------------RESPONSIVE DESIGN----------------------------*/
+
+@media (max-width: 1200px) and (min-width: 768px)
+		
+	.navbar-default .navbar-nav > li > a
+		font-size 17px
+		padding 15px 11px
+		
+	.glyphicon-home, .glyphicon-search, .glyphicon-user 
+		font-size 16px
+
+		
+@media (max-width: 767px)
+	
+	#btn-toggle2
+		border-right solid 2px #fff
+		display inline-block
+		float left
+		left 0px
+		padding 11px 12px
+		position absolute
+		top 0px
+		&:hover
+			background #555
+	
+	#wapper-form
+		margin-top 0px
+		position absolute
+		top 48px
+		width 100%
+	
+		.form-toggle
+			margin-top 0px
+			padding 0px
+			width 100%
+
+			input
+				font-size 17px
+				width 68%
+			
+			button, a 
+				float right
+				font-size 22px
+				margin-top 5px
+				padding 5px 10px 5px 8px
+				
+
+	.glyphicon-arrow-down, .glyphicon-arrow-up
+		font-size 25px
+		
+	.navbar
+		min-height 47px
+		li 
+			padding 0px
+
+	.navbar-default .navbar-nav li a, #btn-toggle, #btn-toggle2
+		height auto
+		padding 10px 12px
+		text-align center
+		&:hover
+			border-bottom none
+
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a
+		color white
+		&:hover 
+			color black
+	
+	.navbar-right li, a 
+		margin 0px
+		padding 0px
+	
+	.navbar-toggle 
+		background-color transparent
+		border none
+		border-left solid 2px #fff
+		border-radius 0px
+		float right
+		margin 0px
+		outline 0
+		padding 16px
+		position relative
+		right 0px
+		top 1px
+
+
+/*----------------FIN DEL RESPONSIVE DESIGN----------------------------*/
