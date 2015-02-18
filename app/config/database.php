@@ -57,7 +57,7 @@ return array(
 			'host'      => 'localhost',
 			'database'  => 'basededatos',
 			'username'  => 'root',
-			'password'  => 'root123',
+			'password'  => '',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_spanish_ci',
 			'prefix'    => '',

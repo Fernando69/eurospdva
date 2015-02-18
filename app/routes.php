@@ -34,27 +34,38 @@ Route::get('contacto', 'WebController@contact');
 
 
 // Estas rutas usan un layaout común log.blade.php
-// Acciones del usuario
-Route::get('registrarse', 'AuthController@signin');
-Route::post('registrarse', 'AuthController@signin_post');
-Route::get('entrar', 'AuthController@login');
-Route::post('entrar', 'AuthController@login_post');
-Route::get('salir', 'AuthController@logout');
+// Acciones del auth
+// Estas rutas usar el AuthController
+Route::get('registrarse', ['as' => 'register', 'uses' => 'AuthController@signin']);
+Route::post('registrarse', ['as' => 'register_post', 'uses' => 'AuthController@signin_post']);
+
+Route::get('entrar', ['as' => 'login', 'uses' => 'AuthController@login']);
+Route::post('entrar', ['as' => 'login_post', 'uses' => 'AuthController@login_post']);
+
+Route::get('salir', ['as' => 'logout', 'uses' => 'AuthController@logout']);
+
+Route::get('panel', ['as' => 'panel', 'uses' => 'AuthController@panel']);
 
 
 
 // Estas rutas usa un layaout unico = panel.blade.php
-Route::get('panel', 'AuthController@panel');
-Route::get('panel/perfil', 'UserController@profile');
-Route::get('panel/ayuda', 'UserController@help');
-Route::get('panel/inscripciones', 'UserController@inscripciones');
-Route::get('panel/constancias', 'UserController@constancias');
-Route::get('panel/acerca', 'UserController@about');
-Route::get('panel/noticias', 'AdminController@news');
-Route::get('panel/usuarios', 'AdminController@users');
+// Estas rutas usan el UserController
+Route::get('panel/perfil', ['as' => 'profile', 'uses' => 'UserController@profile']);
+Route::get('panel/ayuda', ['as' => 'help', 'uses' => 'UserController@help']);
+Route::get('panel/inscripciones', ['as' => 'inscripciones', 'uses' => 'UserController@inscripciones']);
+Route::get('panel/constancias', ['as' => 'constancias', 'uses' => 'UserController@constancias']);
+Route::get('panel/acerca', ['as' => 'about', 'uses' => 'UserController@about']);
 
+// Estas rutas usan el AdminController
+Route::get('panel/noticias', ['as' => 'news', 'uses' => 'AdminController@news']);
 
+Route::get('panel/usuarios', ['as' => 'users', 'uses' => 'AdminController@users']);
+Route::get('panel/usuarios/ver/{id}', ['as' => 'showUser', 'uses' => 'AdminController@show_user']);
 
+Route::get('panel/usuarios/editar/{id}', ['as' => 'editUser', 'uses' => 'AdminController@edit_user']);
+Route::put('panel/usuarios/editar/{id}', ['as' => 'editUser_post', 'uses' => 'AdminController@edit_user_post']);
+
+Route::get('panel/usuarios/eliminar/{id}', ['as' => 'destroy', 'uses' => 'AdminController@destroy_user']);
 
 
 // Error 404 
@@ -62,3 +73,5 @@ App::missing(function($execption)
 {
 	return Response::view('pages.404', array(), 404);
 });
+
+//{{Form::model($userEdit, ['route' => 'editUser_post', 'method' => 'PUT', 'role' => 'form', 'novalidate'])}}

@@ -18,10 +18,10 @@ Entrar |
 	@endif
 
 	{{Form::label('email', 'Correo eletrónico')}}
-	{{Form::text('email', null, array('class' => 'form-control input-lg'))}}
+	{{Form::text('email', null, array('placeholder' => 'Correo electrónico','class' => 'form-control input-lg'))}}
 
 	{{Form::label('password', 'Contraseña')}}
-	{{Form::password('password', array('class' => 'form-control input-lg'))}}
+	{{Form::password('password', array('placeholder' => 'Contraseña','class' => 'form-control input-lg'))}}
 
 	{{Form::label('remember', 'Recuerdame')}}
     {{Form::checkbox('remember', true) }}

@@ -6,7 +6,7 @@
 			<div class="hbox">
 				<h1>U.E. Colegio Don Bosco</h1>
 				<h2>200 años de Don Bosco</h2>
-				<h2>120 años como colegio</h2>
+				<h2>100 años como colegio</h2>
 		    </div>
 		    <div class="logo">
 				<img src="{{asset('img/logo.png')}}">

@@ -8,8 +8,7 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="shortcut icon" href="{{asset('favicon.ico')}}">
 
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-
+	<link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
 	<link rel="stylesheet" href="{{asset('css/menu.css')}}">
 	<link rel="stylesheet" href="{{asset('css/masterlayaout.css')}}">
 	<link rel="stylesheet" href="{{asset('css/panels.css')}}">
@@ -39,7 +38,7 @@
 		@if (Auth::user()->user_level == "administrador")
 		<ul class="nav nav-pills nav-stacked">
 			<h3>Admin.</h3>
-			<li><a href="{{URL::to('/panel/acerca')}}"><b class="glyphicon glyphicon-duplicate"></b> Noticias</a></li>
+			<li><a href="{{URL::to('/panel/noticias')}}"><b class="glyphicon glyphicon-duplicate"></b> Noticias</a></li>
 			<li><a href="{{URL::to('/panel/usuarios')}}"><b class="glyphicon glyphicon-globe"></b> Usuarios</a></li>
 		</ul>
 		@endif

@@ -5,27 +5,27 @@ class UserController extends BaseController {
 // Inicio
 	public function profile()
 	{
-		return View::make('panel.profile');
+		return View::make('panel.user.profile');
 	}
 
 	public function help()
 	{
-		return View::make('panel.help');
+		return View::make('panel.user.help');
 	}
 
 	public function about()
 	{
-		return View::make('panel.about');
+		return View::make('panel.user.about');
 	}
 
 	public function inscripciones()
 	{
-		return View::make('panel.inscripciones');
+		return View::make('panel.user.inscripciones');
 	}
 
 	public function constancias()
 	{
-		return View::make('panel.constancias');
+		return View::make('panel.user.constancias');
 	}
 
 }

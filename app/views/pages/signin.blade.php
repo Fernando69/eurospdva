@@ -19,19 +19,19 @@ Registrarse |
 	@endif
 	
 	{{Form::label('name', 'Nombre (Sólo un nombre)')}}
-	{{Form::text('name', null, array('class' => 'form-control input-lg'))}}
+	{{Form::text('name', null, array('placeholder' => 'Sólo un nombre','class' => 'form-control input-lg'))}}
 
 	{{Form::label('last_name', 'Apellido (Sólo un apellido)')}}
-	{{Form::text('last_name', null, array('class' => 'form-control input-lg'))}}
+	{{Form::text('last_name', null, array('placeholder' => 'Sólo un apellido','class' => 'form-control input-lg'))}}
 
 	{{Form::label('email', 'Correo eletrónico')}}
-	{{Form::email('email', null, array('class' => 'form-control input-lg'))}}
+	{{Form::email('email', null, array('placeholder' => 'Correo electrónico','class' => 'form-control input-lg'))}}
 
 	{{Form::label('password', 'Contraseña (Mínimo 9 caracteres)')}}
-	{{Form::password('password', array('class' => 'form-control input-lg'))}}
+	{{Form::password('password', array('placeholder' => 'Contraseña','class' => 'form-control input-lg'))}}
 
 	{{Form::label('password_confirmation', 'Repite la contraseña')}}
-	{{Form::password('password_confirmation', array('class' => 'form-control input-lg'))}}
+	{{Form::password('password_confirmation', array('placeholder' => 'De nuevo la contraseña','class' => 'form-control input-lg'))}}
 
 	{{Form::label('user_type', 'Tipo de Usuario')}}
 	{{Form::select('user_type', array( 'alumno' => 'Alummno', 'representante' => 'Representante', 'otro' => 'Otro'), 1 )}}
